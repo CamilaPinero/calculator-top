@@ -93,6 +93,7 @@ function executeOperation(number1, operator, number2) {
 	}
 }
 
-document
-	.getElementById("c")
-	.addEventListener("click", (e) => (display.innerHTML = ""));
+document.getElementById("c").addEventListener("click", (e) => {
+	display.innerHTML = "";
+	document.getElementById("result").innerText = "";
+});

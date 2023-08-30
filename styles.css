@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@font-face {
+	font-family: "Digital Display Regular";
+	src: url("DigitalDisplayRegular-ODEO.ttf");
+}
+
 body {
 	display: flex;
 	align-items: center;
@@ -34,6 +40,8 @@ span {
 }
 h3 {
 	margin: 0;
+	font-family: "Michroma", sans-serif;
+	font-size: 0.8em;
 }
 span > div {
 	width: 15px;
@@ -49,6 +57,7 @@ span > div {
 	background-color: rgb(182, 202, 191);
 	border-radius: 4px;
 	text-align: right;
+	font-family: "Digital Display Regular";
 }
 
 .keypad {
@@ -60,6 +69,15 @@ span > div {
 }
 
 #result {
-	font-size: 2em;
-	position: fixed;
+	font-size: 2.3em;
+	height: 24px;
+}
+
+#display {
+	font-size: 1.1em;
+	height: 21px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	line-height: 24px;
 }
