@@ -98,15 +98,12 @@ buttons.forEach((button) =>
 				);
 				op = event.target.id;
 				document.getElementById("result").innerText = "";
-
-				console.log("primero", number1, operator, op);
 				break;
 
 			case Boolean(number1) && !result && !(event.target.id === operator):
 				number2 = parseFloat(
 					document.getElementById("result").innerText
 				);
-				console.log("segundo", number1, operator, number2, op);
 				break;
 
 			case event.target.id === operator &&
@@ -117,18 +114,43 @@ buttons.forEach((button) =>
 				number1 = result;
 				number2 = 0;
 				op = event.target.id;
-				console.log("tercero", number1, operator, number2, op);
 				break;
 
 			case !number2 && Boolean(number1) && Boolean(result):
 				number2 = parseFloat(event.target.id);
 				document.getElementById("result").innerText = number2;
 				result = 0;
-				console.log("cuarto", number1, operator, number2);
 				break;
 
 			default:
-				console.log("ñoseñor");
+				break;
 		}
 	})
 );
+
+document.getElementById("off").addEventListener("click", (e) => {
+	display.innerHTML = "";
+	document.getElementById("result").innerHTML = "";
+	document.querySelectorAll("button").forEach((button) => {
+		if (button.id !== "on") button.setAttribute("disabled", "");
+	});
+});
+
+document.getElementById("on").addEventListener("click", (e) => {
+	document
+		.querySelectorAll("button")
+		.forEach((button) => button.removeAttribute("disabled"));
+});
+
+document.getElementById(".").addEventListener("click", (e) => {
+	if (!document.getElementById("result").innerHTML.match(".")) {
+		console.log(e);
+	} else console.log("no");
+});
+
+/* case result === undefined || result === NaN:
+				display.innerHTML = "";
+				document.getElementById("result").innerText = "";
+				result = number1 = number2 = 0;
+				operator = false;
+				break; */

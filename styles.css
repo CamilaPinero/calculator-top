@@ -5,11 +5,14 @@
 }
 
 body {
+	font-family: "Michroma", sans-serif;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
 	height: 100vh;
+	margin: 0;
 	background: rgb(242, 234, 255);
 	background: radial-gradient(
 		circle,
@@ -19,15 +22,17 @@ body {
 }
 
 .frame {
-	width: 170px;
-	height: 220px;
+	width: 200px;
+	height: 250px;
 	background-color: #504f4f;
-
+	border-width: 4px;
+	border-style: outset;
+	border-color: #3d3939;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	border-radius: 8px;
+	border-radius: 6px;
 }
 .header {
 	display: flex;
@@ -40,8 +45,8 @@ span {
 }
 h3 {
 	margin: 0;
-	font-family: "Michroma", sans-serif;
-	font-size: 0.8em;
+	margin-top: -3px;
+	font-size: 1.1em;
 }
 span > div {
 	width: 15px;
@@ -49,6 +54,10 @@ span > div {
 	background-color: #291e1e;
 	margin-left: 1px;
 	border-radius: 2px;
+	border-width: 1px;
+	border-style: inset;
+	border-color: #3b3636;
+	box-sizing: border-box;
 }
 
 .display {
@@ -58,6 +67,9 @@ span > div {
 	border-radius: 4px;
 	text-align: right;
 	font-family: "Digital Display Regular";
+	border-width: 2px;
+	border-style: inset;
+	box-sizing: border-box;
 }
 
 .keypad {
@@ -66,6 +78,7 @@ span > div {
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	gap: 3px;
+	width: fit-content;
 }
 
 #result {
@@ -80,4 +93,23 @@ span > div {
 	align-items: center;
 	justify-content: end;
 	line-height: 24px;
+	box-sizing: border-box;
+}
+
+button {
+	appearance: none;
+	font-family: "Michroma", sans-serif;
+}
+
+#off {
+	background-color: #c56e6e;
+}
+
+#on {
+	background-color: #476d9e;
+}
+
+footer {
+	margin-top: 20px;
+	color: #504f4f;
 }
