@@ -113,3 +113,9 @@ footer {
 	margin-top: 20px;
 	color: #504f4f;
 }
+
+button:disabled {
+	background-color: buttonface;
+	color: buttontext;
+	border-color: buttonborder;
+}
